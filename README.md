@@ -10,3 +10,5 @@ To run with tinygo in the same folder as tinygodoc:
 ```
 go run ./cmd/tgdoc -http=:18080 ../tinygo/targets ../tinygo/src/machine 
 ```
+
+![Front page of the tgdoc tool showing two modes of browsing, one by target and one by identifier](landing.png)
