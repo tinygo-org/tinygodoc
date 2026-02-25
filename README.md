@@ -1,4 +1,4 @@
-# go-module-template
+# tinygodoc
 [![go.dev reference](https://pkg.go.dev/badge/github.com/tinygo-org/tinygodoc)](https://pkg.go.dev/github.com/tinygo-org/tinygodoc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tinygo-org/tinygodoc)](https://goreportcard.com/report/github.com/tinygo-org/tinygodoc)
 [![codecov](https://codecov.io/gh/tinygo-org/tinygodoc/branch/main/graph/badge.svg)](https://codecov.io/gh/tinygo-org/tinygodoc)
@@ -6,9 +6,23 @@
 [![sourcegraph](https://sourcegraph.com/github.com/tinygo-org/tinygodoc/-/badge.svg)](https://sourcegraph.com/github.com/tinygo-org/tinygodoc?badge)
 [![License: BSD-3](https://img.shields.io/badge/License-BSD3-green.svg)](https://opensource.org/license/bsd-3-clause-open-mpi)
 
+Browse tinygo APIs easily. Above is the HTTP server for browsing different APIs among targets, with the ADC type selected. The number to the right of the API is the amount of times it appears in documentation.
+
 To run with tinygo in the same folder as tinygodoc:
 ```
 go run ./cmd/tgdoc -http=:18080 ../tinygo/targets ../tinygo/src/machine 
 ```
 
 ![Front page of the tgdoc tool showing two modes of browsing, one by target and one by identifier](landing.png)
+
+```
+Usage of tgdoc:
+  -all
+        include unexported identifiers
+  -base
+        include base/parent targets
+  -http string
+        serve HTTP documentation (e.g. :8080)
+  -json
+        output JSON to stdout
+```
